@@ -27,6 +27,7 @@ public class Game {
             Instruction instruction = Instruction.parseInstruction(input.nextLine());
             executeInstruction(instruction);
         }
+        input.close();
     }
 
     private void setRunning(boolean running) {
