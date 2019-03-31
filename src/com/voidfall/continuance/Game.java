@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.voidfall.continuance;
 
 import java.util.HashMap;
@@ -44,6 +39,9 @@ public class Game {
      */
     private void executeInstruction(Instruction instruction) {
         switch (instruction.getCommand()) {
+            case GO:
+                break;
+
             case QUIT:
                 setRunning(false);
                 print("QUITMSG");

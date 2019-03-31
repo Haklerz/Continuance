@@ -1,13 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.voidfall.continuance;
 
 /**
- *
- * @author Hakerz
+ * Represents a command.
+ * 
+ * @author Håkon "Haklerz" Lervik
  */
 public enum Command {
     GO("go"),
@@ -16,14 +12,26 @@ public enum Command {
     
     private final String commandString;
     
+    /**
+     * 
+     * @param commandString
+     */
     private Command(String commandString) {
         this.commandString = commandString;
     }
-    
+    /**
+     * 
+     * @return
+     */
     private String getCommandString() {
         return this.commandString;
     }
 
+    /**
+     * 
+     * @param string
+     * @return
+     */
     public static Command parseCommand(String string) {
         Command command = UNKNOWN;
         for (Command tryCommand : Command.values()) {
